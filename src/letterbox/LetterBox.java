@@ -8,7 +8,7 @@ public class LetterBox {
         var wfcontroller = new WordFrequencyController();
         
         lista.add("init");
-        lista.add("stop oi eduarda");
+        lista.add("stop");
         wfcontroller.dispatch(lista);
         
         lista.clear();
