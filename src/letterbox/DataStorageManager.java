@@ -1,6 +1,5 @@
 package letterbox;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.regex.Pattern;
 
 public class DataStorageManager {
@@ -11,27 +10,26 @@ public class DataStorageManager {
     }
     
     // MÉTODOS
-    public ArrayList dispatch(ArrayList<String> message){
+    public ArrayList dispatch(String message, ArrayList<String> lista){
         
-        if ("init".equals(message.get(0))){
-            return init(message.get(1));
-        } else if ("words".equals(message.get(0))) {
-            return words();
+        if ("init".equals(message)){
+            return init(lista);
+        } else if ("words".equals(message)) {
+            return lista;
         } else {
-            throw new UnsupportedOperationException("Message not understood " + message.get(0));
+            throw new UnsupportedOperationException("Message not understood " + message);
         }   
+
     }
 
-    private ArrayList init(String message) {
+    private ArrayList init(ArrayList<String> lista) {
         var pattern = Pattern.compile("[\\W_]+");
-        data = message;
+        
+        for (String word : lista){
+            data += word + " ";
+        }
+        
         data = data.replaceAll(String.valueOf(pattern), " ");
         return null;
     }
-
-    private ArrayList words() {
-        String[] strSplit = data.split(" ");
-        ArrayList<String> strList = new ArrayList<>(Arrays.asList(strSplit));
-        return strList;
-        }
 }

@@ -15,20 +15,20 @@ public class StopWordManager {
     }
     
     // MÉTODOS
-    public boolean dispatch(ArrayList<String> message) throws IOException{
-        if ("init".equals(message.get(0))){
+    public String dispatch(String message, String word) throws IOException{
+        if ("init".equals(message)){
            this.init();
-        } else if ("is_stop_word".equals(message.get(0))){
-            return is_stop_word(message.get(1));
+        } else if ("is_stop_word".equals(message)){
+            return String.valueOf(is_stop_word(word));
         } else {
-            throw new UnsupportedOperationException("Message not understood " + message.get(0));
+            throw new UnsupportedOperationException("Message not understood " + message);
         }
         
-        return true;
+        return null;
     }
 
     private void init() throws FileNotFoundException, IOException {
-        File arquivo = new File("stop_words.txt");
+        File arquivo = new File("src\\arquivos\\stop_words.txt");
         FileReader fr = new FileReader(arquivo);
         BufferedReader br = new BufferedReader(fr);
         

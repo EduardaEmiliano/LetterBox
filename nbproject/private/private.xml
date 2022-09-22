@@ -5,9 +5,10 @@
         <group>
             <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/letterbox/StopWordManager.java</file>
             <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/letterbox/WordFrequencyController.java</file>
+            <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/arquivos/stop_words.txt</file>
             <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/letterbox/WordFrequencyManager.java</file>
-            <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/letterbox/LetterBox.java</file>
             <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/letterbox/DataStorageManager.java</file>
+            <file>file:/C:/Users/dudys/OneDrive/Documentos/NetBeansProjects/LetterBox/src/letterbox/LetterBox.java</file>
         </group>
     </open-files>
 </project-private>
